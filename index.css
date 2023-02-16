@@ -1,16 +1,42 @@
 body {
     background-color:  hsl(218, 23%, 16%);
     font-size: 28px;
-    width: 100% ;
+    width: 1440px;
+    height: 100vh;
     font-family: 'Manrope', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
 
 section {
+    margin: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+section .card {
+    width: 600px;
+    height: 350px;
+    padding: 10%;
+    border-radius: 5%;
+    align-items: center;
     color:  hsl(193, 38%, 86%);
     background-color: hsl(217, 19%, 24%);
+    text-align: center;
 }
 
 .attribution{
     background-color:  hsl(218, 23%, 16%);
+    font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        width: 400px;
+    }
+    section {
+        width: 375px;
+    }
+    section .card {
+        height: 300px;
+    }
 }
