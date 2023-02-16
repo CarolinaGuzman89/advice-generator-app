@@ -1,4 +1,16 @@
 body {
     background-color:  hsl(218, 23%, 16%);
     font-size: 28px;
+    width: 100% ;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    color:  hsl(193, 38%, 86%);
+    background-color: hsl(217, 19%, 38%);
+}
+
+.attribution{
+    background-color:  hsl(218, 23%, 16%);
 }
