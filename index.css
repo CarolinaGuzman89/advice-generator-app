@@ -1,21 +1,25 @@
 body {
     background-color:  hsl(218, 23%, 16%);
     font-size: 28px;
-    width: 1440px;
+    width: 100vw;
     height: 100vh;
     font-family: 'Manrope', sans-serif;
     font-family: 'Roboto', sans-serif;
+
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-template-rows: repeat(12, [col-start] 1fr);
 }
 
 section {
-    margin: 10%;
-    display: flex;
-    justify-content: center;
+    grid-column-start: 6;
+    grid-row-start: 6;
 }
 
+
 section .card {
-    width: 600px;
-    height: 350px;
+    width: 450px;
+    height: 250px;
     padding: 10%;
     border-radius: 5%;
     align-items: center;
@@ -24,7 +28,7 @@ section .card {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
 }
 h2 {
     color: hsl(150, 100%, 66%);
@@ -34,9 +38,15 @@ h2 {
 button {
     background-color: hsl(150, 100%, 66%);
     border: none;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    margin: auto;
+    top: 63%;
+    bottom: 37%;
+
 }
 
 button img {
@@ -44,19 +54,21 @@ button img {
 }
 
 @media screen and (max-width: 600px) {
-    body{
-        width: 400px;
-    }
     section {
-        width: 375px;
+        grid-column-start: 4;
     }
     section .card {
-        height: 300px;
+        width: 400px;
+        height: 325px;
         padding: 5%;
-        font-size: 25px;
     }
     .divider-desktop{
         display: none;
+    }
+
+    button {
+        top: 65%;
+        bottom: 35%;
     }
 
 }
